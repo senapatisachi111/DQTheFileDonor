@@ -1220,6 +1220,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
 
     elif query.data == "malspell":
+        mv_rqst = msg.text
+        search = mv_rqst.replace(" ", "+")
         buttons = [[
             InlineKeyboardButton('🔍 ɢᴏᴏɢʟᴇ 🔎', url=f'https://www.google.com/search?q={search}'),
             InlineKeyboardButton(' 🔍 ʏᴀɴᴅᴇx 🔎', url=f'https://yandex.com/search?q={search}')
@@ -1234,6 +1236,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
 
     elif query.data == "engspell":
+        mv_rqst = msg.text
+        search = mv_rqst.replace(" ", "+")
         buttons = [[
             InlineKeyboardButton('🔍 ɢᴏᴏɢʟᴇ 🔎', url=f'https://www.google.com/search?q={search}'),
             InlineKeyboardButton(' 🔍 ʏᴀɴᴅᴇx 🔎', url=f'https://yandex.com/search?q={search}')
