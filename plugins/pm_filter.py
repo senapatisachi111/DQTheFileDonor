@@ -1220,8 +1220,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
 
     elif query.data == "malspell":
-        mv_rqst = msg.text
-        search = mv_rqst.replace(" ", "+")
         buttons = [[
             InlineKeyboardButton('🔍 ɢᴏᴏɢʟᴇ 🔎', url=f'https://www.google.com/search?q={search}'),
             InlineKeyboardButton(' 🔍 ʏᴀɴᴅᴇx 🔎', url=f'https://yandex.com/search?q={search}')
@@ -1236,8 +1234,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
 
     elif query.data == "engspell":
-        mv_rqst = msg.text
-        search = mv_rqst.replace(" ", "+")
         buttons = [[
             InlineKeyboardButton('🔍 ɢᴏᴏɢʟᴇ 🔎', url=f'https://www.google.com/search?q={search}'),
             InlineKeyboardButton(' 🔍 ʏᴀɴᴅᴇx 🔎', url=f'https://yandex.com/search?q={search}')
@@ -1684,12 +1680,9 @@ async def advantage_spell_chok(msg):
     if not g_s:
         search = mv_rqst.replace(" ", "+")
         btn = [[
-            InlineKeyboardButton('🔍 ɢᴏᴏɢʟᴇ 🔎', url=f'https://google.com/search?q={search}'),
-            InlineKeyboardButton(' 🔍 ʏᴀɴᴅᴇx 🔎', url=f'https://yandex.com/search?q={search}')
-        ],[
-            InlineKeyboardButton("🇮🇳 ᴛʀᴀɴsʟᴀᴛᴇ ᴛᴏ ᴍᴀʟᴀʏᴀʟᴀᴍ 🇮🇳", callback_data="malspell")
+            InlineKeyboardButton('🔍 ɢᴏᴏɢʟᴇ 🔎', url=f'https://google.com/search?q={search}')
         ]]        
-        k=await msg.reply_photo(photo="https://telegra.ph/file/4bb1968bd091453b0070c.jpg", caption=script.SPELL_CHECK_ENG_TXT, reply_markup=InlineKeyboardMarkup(btn))    
+        k=await msg.reply_photo(photo="https://telegra.ph/file/5d54fb9ba5b6eb42e1fbf.jpg", caption=script.SPELL_CHECK_ENG_TXT, reply_markup=InlineKeyboardMarkup(btn))    
         await asyncio.sleep(120)
         await k.delete()
         await msg.delete()
@@ -1721,12 +1714,9 @@ async def advantage_spell_chok(msg):
     if not movielist:
         search = mv_rqst.replace(" ", "+")
         btn = [[
-            InlineKeyboardButton('🔍 ɢᴏᴏɢʟᴇ 🔎', url=f'https://google.com/search?q={search}'),
-            InlineKeyboardButton(' 🔍 ʏᴀɴᴅᴇx 🔎', url=f'https://yandex.com/search?q={search}')
-        ],[
-            InlineKeyboardButton("🇮🇳 ᴛʀᴀɴsʟᴀᴛᴇ ᴛᴏ ᴍᴀʟᴀʏᴀʟᴀᴍ 🇮🇳", callback_data="malspell")
+            InlineKeyboardButton('🔍 ɢᴏᴏɢʟᴇ 🔎', url=f'https://google.com/search?q={search}')
         ]]           
-        k=await msg.reply_photo(photo="https://telegra.ph/file/4bb1968bd091453b0070c.jpg", caption=script.SPELL_CHECK_ENG_TXT, reply_markup=InlineKeyboardMarkup(btn))    
+        k=await msg.reply_photo(photo="https://telegra.ph/file/5d54fb9ba5b6eb42e1fbf.jpg", caption=script.SPELL_CHECK_ENG_TXT, reply_markup=InlineKeyboardMarkup(btn))    
         await asyncio.sleep(120)
         await k.delete()
         await msg.delete()
@@ -1734,12 +1724,9 @@ async def advantage_spell_chok(msg):
     SPELL_CHECK[msg.id] = movielist
     search = mv_rqst.replace(" ", "+")
     btn = [[
-        InlineKeyboardButton('🔍 ɢᴏᴏɢʟᴇ 🔎', url=f'https://google.com/search?q={search}'),
-        InlineKeyboardButton(' 🔍 ʏᴀɴᴅᴇx 🔎', url=f'https://yandex.com/search?q={search}')
-    ],[
-        InlineKeyboardButton("🇮🇳 ᴛʀᴀɴsʟᴀᴛᴇ ᴛᴏ ᴍᴀʟᴀʏᴀʟᴀᴍ 🇮🇳", callback_data="malspell")
+        InlineKeyboardButton('🔍 ɢᴏᴏɢʟᴇ 🔎', url=f'https://google.com/search?q={search}')
     ]]
-    k=await msg.reply_photo(photo="https://telegra.ph/file/4bb1968bd091453b0070c.jpg", caption=script.SPELL_CHECK_ENG_TXT, reply_markup=InlineKeyboardMarkup(btn))    
+    k=await msg.reply_photo(photo="https://telegra.ph/file/5d54fb9ba5b6eb42e1fbf.jpg", caption=script.SPELL_CHECK_ENG_TXT, reply_markup=InlineKeyboardMarkup(btn))    
     await asyncio.sleep(120)
     await k.delete()
     await msg.delete()
